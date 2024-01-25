@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  ui:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+
+    command: npm run dev
+
+    volumes:
+      - .:/usr/src/app
+
+    ports:
+      - 3000:3000
